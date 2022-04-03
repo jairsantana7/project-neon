@@ -1,0 +1,83 @@
+.card-depoimento {
+  background-color: rgba(241, 240, 245, 0.55);
+  border-radius: 0.8rem;
+  padding: 3.2rem;
+  width: 100%;
+  max-width: 38.4rem;
+  min-height: 20.9rem;
+
+  .user {
+    @include flex(row, center, space-between);
+    strong {
+      font-family: "Poppins", serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 112%;
+      /* or 20px */
+      letter-spacing: -1px;
+    }
+    img {
+      height: auto;
+      max-width: 17.23px;
+      width: 100%;
+    }
+  }
+
+  p {
+    @include p1;
+    color: $grey-400;
+    margin-top: 2.1rem;
+  }
+}
+
+.btn-primary {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  text-align: center;
+
+  color: #855b35;
+  padding: 1.6rem 2.7rem;
+  border-radius: 12.2rem;
+  background-color: $brand-yellow;
+  transition: all, 0.3s;
+
+  &:hover {
+    background-color: #ffdc5c;
+  }
+}
+
+.btn-secondary {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+
+  text-align: center;
+
+  color: $brand-light-blue;
+  padding: 1.3rem 1.9rem;
+  border-radius: 12.2rem;
+  border: 1px solid $brand-light-blue;
+  transition: all, 0.3s;
+
+  &:hover {
+    background-color: $brand-light-blue;
+    color: $brand-white;
+  }
+  &.white {
+    color: $brand-white;
+    border: 1px solid $brand-white;
+    background-color: transparent;
+    &:hover {
+      background-color: $brand-white;
+      color: $brand-light-blue;
+    }
+  }
+}

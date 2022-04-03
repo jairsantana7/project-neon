@@ -1,0 +1,92 @@
+footer {
+  margin-top: 15.4rem;
+  background-color: $brand-blue;
+  .container {
+    .top {
+      @include flex(row, center, space-between);
+      border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+      height: 12.7rem;
+
+      .cv-social {
+        @include flex(row, center, space-between);
+        gap: 30px;
+        span {
+          font-size: 1.4rem;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 125%;
+        }
+      }
+    }
+
+    .main {
+      margin-top: 5.7rem;
+      nav {
+        @include flex(row, initial, space-between);
+        padding-bottom: 6.2rem;
+        border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+        .item {
+          strong {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 125%;
+            color: $brand-white;
+          }
+          ul {
+            margin-top: 29px;
+
+            li {
+              &:not(:last-child) {
+                margin-bottom: 29px;
+              }
+            }
+            a {
+              color: rgba(255, 255, 255, 0.7);
+              transition: color, 0.3s;
+              &:hover {
+                color: $brand-yellow;
+              }
+            }
+          }
+          &.atendimento {
+            strong {
+              display: block;
+            }
+            li {
+              a {
+                @include flex(row, center, flex-start);
+                gap: 24px;
+              }
+              width: 28rem;
+              border-radius: 6px;
+              background-color: $brand-light-blue;
+              padding: 17px;
+              transition: all, 0.4s;
+              cursor: pointer;
+              span {
+                color: $brand-white;
+              }
+              &:hover {
+                background-color: $brand-yellow;
+                span,
+                strong {
+                  color: $brand-yellow-2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      p {
+        padding: 39px 0;
+        color: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        max-width: 66rem;
+      }
+
+      border-bottom: 2px solid $brand-yellow;
+    }
+  }
+}
